@@ -1,0 +1,64 @@
+➜  lms_app git:(main) ✗ npm create vite@latest 
+Ok to proceed? (y) y
+◇  Project name:
+│  client
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Scaffolding project in /home/akhila/projects/react_projects/lms_app/client...
+│
+└  Done. Now run:
+
+  cd client
+  npm install
+  npm run dev
+
+➜  lms_app git:(main) ✗ cd client 
+➜  client git:(main) ✗ npm install              
+➜  client git:(main) ✗ npm run dev
+
+
+> client@0.0.0 dev
+> vite
+
+
+  VITE v7.1.3  ready in 229 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+...................................................................
+
+1.  go to index.html page , set title for your project
+2.  go to src/app.jsx and remove code and type rafce snippet
+
+
+
+to know the current path :pwd
+
+installing multiple dependencies for your project. 
+
+react-router-dom → Routing library for React (handles navigation, pages, etc.).
+react-youtube → Embeds YouTube videos easily inside your React app.
+uniqid → Generates unique IDs (useful for keys, IDs, etc.).
+quill → Rich text editor (WYSIWYG).
+humanize-duration → Converts milliseconds into human-readable time (e.g., 3600000 → "1 hour").
+rc-progress → React progress bar components (circle, line).
+react-simple-star-rating → Star rating component
+
+➜ client git:(main) ✗ npm install react-router-dom react-youtube uniqid quill humanize-duration rc-progress react-simple-star-rating
+
+https://tailwindcss.com/docs/installation/using-vite
+➜ client git:(main) ✗ npm install tailwindcss @tailwindcss/vite
+➜ client git:(main) ✗ npx tailwindcss init -p  (or) touch tailwind.config.js
+
+
+https://fonts.google.com/selection/embed
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap');
+* {
+  font-family: "Outfit", sans-serif;
+}
