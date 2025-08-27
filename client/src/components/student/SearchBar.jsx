@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = ({data}) => {
+const SearchBar = ({ data }) => {
   const navigate = useNavigate();
   const [input, setInput] = useState(data ? data : "");
   const onSearchHandler = (e) => {
@@ -16,7 +16,7 @@ const SearchBar = ({data}) => {
   return (
     <form
       onSubmit={onSearchHandler}
-      className="flex items-center bg-white rounded-lg overflow-hidden shadow-md w-full max-w-md mx-auto md:mx-0"
+      className="flex items-center bg-white rounded-full overflow-hidden shadow-md w-full max-w-md mx-auto md:mx-0"
     >
       {/* Icon */}
       <div className="px-3">
@@ -39,7 +39,7 @@ const SearchBar = ({data}) => {
       {/* Search Button */}
       <button
         type="submit"
-        className="border bg-black border-white text-white px-6 py-3 rounded-lg font-medium"
+        className="border bg-black border-white text-white px-6 py-3 rounded-full font-medium"
       >
         Search
       </button>
