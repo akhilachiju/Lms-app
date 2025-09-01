@@ -17,7 +17,7 @@ const CourseCard = ({ course }) => {
     <Link
       to={`/course/${course._id}`}
       onClick={() => scrollTo(0, 0)}
-      className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition flex flex-col"
+      className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-transform duration-300 transform hover:scale-105 flex flex-col"
     >
       {/* Thumbnail */}
       <img
@@ -52,10 +52,12 @@ const CourseCard = ({ course }) => {
         {/* Price */}
         <div className="mt-3 flex items-center">
           <p className="text-lg font-bold text-black">
-            {currency}{finalPrice}
+            {currency}
+            {finalPrice}
             {course.discount > 0 && (
               <span className="ml-2 text-sm text-gray-500 line-through">
-                {currency}{course.coursePrice}
+                {currency}
+                {course.coursePrice}
               </span>
             )}
           </p>

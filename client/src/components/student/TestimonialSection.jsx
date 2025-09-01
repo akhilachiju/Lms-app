@@ -15,11 +15,11 @@ const TestimonialSection = () => {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {dummyTestimonial.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition hover:shadow-lg"
+              className="w-full sm:w-[48%] lg:w-[30%] bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition hover:shadow-lg"
             >
               {/* Header */}
               <div className="bg-gray-200 p-4 sm:p-6 flex items-center gap-3 sm:gap-4">

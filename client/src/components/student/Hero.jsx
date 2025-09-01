@@ -5,26 +5,30 @@ import SearchBar from "./SearchBar";
 const Hero = () => {
   return (
     <section className="bg-black text-white">
-      <div className="container mx-auto px-10 py-10 flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 py-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
+        
         {/* Text content */}
-        <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="w-full lg:w-1/2 text-center lg:text-left space-y-5">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
             Learn Anything, Anytime
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-md mx-auto lg:mx-0">
             Access hundreds of courses and become an expert in your field. Start
             your journey today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"></div>
-          <SearchBar />
+
+          {/* SearchBar */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full">
+            <SearchBar className="w-full sm:w-auto" />
+          </div>
         </div>
 
         {/* Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0">
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <img
             src={heroImage}
             alt="Learning illustration"
-            className="w-1/2 transition-transform duration-500 ease-in-out hover:scale-105"
+            className="w-3/4 sm:w-2/3 max-w-xs sm:max-w-sm md:max-w-md transition-transform duration-500 ease-in-out hover:scale-105"
           />
         </div>
       </div>

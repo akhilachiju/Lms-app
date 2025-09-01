@@ -17,7 +17,7 @@ const CallToAction = () => {
         </p>
 
         {/* CTA Buttons Wrapper */}
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex flex-wrap justify-center items-center gap-4">
           {/* CTA Link */}
           <a
             href="#"
@@ -29,7 +29,7 @@ const CallToAction = () => {
           {/* Learn More Button */}
           <button className="flex items-center gap-2 border px-6 py-3 rounded-full font-medium cursor-pointer">
             Learn more
-            <img src={assets.arrow_icon} alt="arrow_icon" className="w-4 h-4"/>
+            <img src={assets.arrow_icon} alt="arrow_icon" className="w-4 h-4" />
           </button>
         </div>
       </div>
