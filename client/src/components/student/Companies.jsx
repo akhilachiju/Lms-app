@@ -3,9 +3,9 @@ import { assets } from "../../assets/assets";
 
 const Companies = () => {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-6 text-center">
-        <p className="text-gray-600 text-lg font-medium mb-8">
+        <p className="text-gray-600 mb-12">
           Trusted by learners from top companies
         </p>
 

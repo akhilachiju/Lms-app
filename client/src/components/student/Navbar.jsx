@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { assets } from "../../assets/assets";
 import { Link, useLocation } from "react-router-dom";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import AppContext from "../../context/AppContext";
 
 const Navbar = () => {
+  const { navigate, isEducator } = useContext(AppContext);
   const location = useLocation();
   const isCourseListPage = location.pathname.includes("/course-list");
   const { openSignIn } = useClerk();
@@ -17,6 +19,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <img
+        onClick={() => navigate("/")}
         src={assets.logo}
         alt="Logo"
         className="w-28 lg:w-32 cursor-pointer scale-75"
@@ -27,9 +30,19 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           {user && (
             <>
-              <button>Become Educator</button>
+              <button
+                onClick={() => navigate("/educator")}
+                className="transform transition duration-200 hover:scale-105"
+              >
+                {isEducator ? "Educator Dashboard" : "Become Educator"}
+              </button>
               <span className="text-gray-400">|</span>
-              <Link to="/my-enrollments">My Enrollments</Link>
+              <Link
+                to="/my-enrollments"
+                className="transform transition duration-200 hover:scale-105"
+              >
+                My Enrollments
+              </Link>
             </>
           )}
         </div>
@@ -50,7 +63,12 @@ const Navbar = () => {
         <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
           {user && (
             <>
-              <button>Become Educator</button>
+              <button
+                onClick={() => navigate("/educator")}
+                className="transform transition duration-200 hover:scale-105"
+              >
+                {isEducator ? "Educator Dashboard" : "Become Educator"}
+              </button>
               <span className="text-gray-400">|</span>
               <Link to="/my-enrollments">My Enrollments</Link>
             </>

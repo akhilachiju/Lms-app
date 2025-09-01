@@ -17,11 +17,11 @@ const CourseSection = () => {
     <section className="py-12 bg-white">
       <div className="container mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             Explore Our Courses
           </h2>
-          <p className="text-black max-w-2xl mx-auto mb-6">
+          <p className="text-gray-600 mb-12">
             Choose from a wide range of courses designed to help you learn new
             skills, upgrade your knowledge, and achieve your career goals.
           </p>
