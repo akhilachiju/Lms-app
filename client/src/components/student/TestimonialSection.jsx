@@ -6,7 +6,7 @@ const TestimonialSection = () => {
     <section className="py-12 md:py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3">
+        <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold mb-4 text-black">
           Testimonials
         </h2>
         <p className="text-gray-600 mb-10 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto text-sm sm:text-base">

@@ -6,12 +6,12 @@ const CallToAction = () => {
     <section className="py-12 bg-white text-center">
       <div className="max-w-4xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+        <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold mb-4 text-black">
           Take the Next Step in Your Learning Journey
         </h2>
 
         {/* Subheading */}
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-10 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto text-sm sm:text-base">
           Join thousands of learners who are upgrading their skills and building
           brighter futures. Start your journey today!
         </p>
@@ -21,7 +21,7 @@ const CallToAction = () => {
           {/* CTA Link */}
           <a
             href="#"
-            className="inline-block border bg-black border-white text-white px-6 py-3 rounded-full font-medium"
+            className="inline-block border bg-black text-white px-6 py-3 rounded-full font-medium"
           >
             Get Started
           </a>

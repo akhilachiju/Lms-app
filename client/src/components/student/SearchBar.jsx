@@ -1,48 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { assets } from "../../assets/assets";
-import { useNavigate } from "react-router-dom";
 
-const SearchBar = ({ data }) => {
-  const navigate = useNavigate();
-  const [input, setInput] = useState(data ? data : "");
-
-  const onSearchHandler = (e) => {
-    e.preventDefault();
-    if (input.trim()) {
-      navigate("/course-list" + input);
-    }
-  };
-
+const SearchBar = ({ value, onChange }) => {
   return (
     <form
-      onSubmit={onSearchHandler}
-      className="flex items-center bg-white rounded-full overflow-hidden shadow-md w-11/12 sm:w-full max-w-md mx-auto md:mx-0"
+      className="flex items-center bg-white rounded-full overflow-hidden shadow-md 
+                 w-11/12 sm:w-full max-w-md mx-auto md:mx-0"
     >
+      {/* Input */}
+      <input
+        value={value}
+        onChange={onChange}
+        type="text"
+        placeholder="Search for courses..."
+        className="flex-grow px-2 py-2 xs:px-3 xs:py-2.5 sm:px-4 sm:py-3 
+                   text-sm xs:text-base sm:text-base text-black outline-none"
+      />
+
       {/* Icon */}
-      <div className="px-2 sm:px-3">
+      <div
+        className="flex items-center justify-center 
+                   w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 
+                   bg-black rounded-full mr-0.5 sm:mr-1.5"
+      >
         <img
           src={assets.search_icon}
           alt="Search icon"
-          className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500"
+          className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 filter brightness-0 invert"
         />
       </div>
-
-      {/* Input */}
-      <input
-        onChange={(e) => setInput(e.target.value)}
-        value={input}
-        type="text"
-        placeholder="Search for courses..."
-        className="flex-grow px-1.5 py-1.5 xs:px-2 xs:py-2 sm:px-3 sm:py-3 text-xs xs:text-sm sm:text-base text-black outline-none"
-      />
-
-      {/* Search Button */}
-      <button
-        type="submit"
-        className="border bg-black border-white text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium text-sm sm:text-base cursor-pointer"
-      >
-        Search
-      </button>
     </form>
   );
 };

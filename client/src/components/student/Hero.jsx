@@ -1,34 +1,50 @@
 import React from "react";
+import right from "../../assets/right.png";
 import heroImage from "../../assets/hero_image.svg";
 import SearchBar from "./SearchBar";
 
 const Hero = () => {
   return (
-    <section className="bg-black text-white">
-      <div className="container mx-auto px-4 sm:px-6 py-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
-        
-        {/* Text content */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left space-y-5">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
-            Learn Anything, Anytime
+    <section className="relative bg-gradient-to-r from-black via-indigo-700 to-purple-700 text-white py-20 px-6 sm:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div className="text-center lg:text-left">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+            Empower Your Career Growth with{" "}
+            <span className="text-yellow-300">Learning</span>
           </h1>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-md mx-auto lg:mx-0">
-            Access hundreds of courses and become an expert in your field. Start
-            your journey today!
+          <p className="text-gray-200 text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+            Access expert-led courses and video lessons designed to help you
+            build new skills, grow professionally, and stay ahead in your career
+            journey.
           </p>
 
-          {/* SearchBar */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full">
-            <SearchBar className="w-full sm:w-auto" />
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4">
+            <a
+              href="#courses"
+              className="inline-flex items-center justify-center gap-2 border border-white bg-white text-black px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition"
+            >
+              Get Started
+            </a>
+
+            <button className="inline-flex items-center justify-center gap-2 border border-white text-white px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition">
+              Learn More
+              <img
+                src={right}
+                alt="arrow_icon"
+                className="w-4 h-4"
+              />
+            </button>
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        {/* Right Side Illustration */}
+        <div className="flex justify-center lg:justify-end">
           <img
-            src={heroImage}
-            alt="Learning illustration"
-            className="w-3/4 sm:w-2/3 max-w-xs sm:max-w-sm md:max-w-md transition-transform duration-500 ease-in-out hover:scale-105"
+            src={heroImage} // replace with your illustration
+            alt="Learning Illustration"
+            className="w-full max-w-md lg:max-w-lg drop-shadow-xl"
           />
         </div>
       </div>

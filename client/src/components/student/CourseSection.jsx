@@ -21,7 +21,7 @@ const CourseSection = () => {
           <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold mb-4 text-black">
             Explore Our Courses
           </h2>
-          <p className="text-gray-600 mb-10 text-sm xs:text-base">
+          <p className="text-gray-600 mb-10 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto text-sm sm:text-base">
             Choose from a wide range of courses designed to help you learn new
             skills, upgrade your knowledge, and achieve your career goals.
           </p>
@@ -29,7 +29,7 @@ const CourseSection = () => {
 
         {/* Course Grid */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-6 mb-10">
-          {allCourses.slice(0, 4).map((course, index) => (
+          {allCourses.slice(0, 8).map((course, index) => (
             <CourseCard key={index} course={course} />
           ))}
         </div>

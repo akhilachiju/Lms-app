@@ -6,7 +6,7 @@ const Footer = () => {
   const { navigate } = useContext(AppContext);
 
   return (
-    <footer className="bg-black text-white px-6 sm:px-12 md:px-12 lg:px-20 py-12">
+    <footer className="relative bg-gradient-to-r from-black via-indigo-700 to-purple-700 text-white px-6 sm:px-12 md:px-12 lg:px-20 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Left */}
         <div className="text-center lg:text-left">
@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-700 text-center mt-10 pt-4 text-xs text-gray-500">
+      <div className="border-t border-white text-center mt-10 pt-4 text-xs text-white">
         Copyright 2025 © LMS. All Right Reserved.
       </div>
     </footer>
