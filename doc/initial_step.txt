@@ -62,3 +62,11 @@ https://fonts.google.com/selection/embed
 * {
   font-family: "Outfit", sans-serif;
 }
+
+user authentication
+https://clerk.com/
+npm install @clerk/clerk-react
+
+breadcrumbs
+lucide-react is a React icon library. It provides a set of SVG-based icons that are lightweight, customizable, and easy to use in React projects. It’s essentially a modern alternative to libraries like Font Awesome or Heroicons.
+npm install lucide-react
