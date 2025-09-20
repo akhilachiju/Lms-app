@@ -11,28 +11,34 @@ import Dashboard from "./pages/educator/Dashboard";
 import MyCourse from "./pages/educator/MyCourse";
 import StudentsEnrolled from "./pages/educator/StudentsEnrolled";
 import Navbar from "./components/student/Navbar";
+import Footer from "./components/student/Footer";
 
 const App = () => {
-
-  const isEducatorRoute = useMatch('/educator/*')
+  const isEducatorRoute = useMatch("/educator/*");
   return (
-    <div className="text-default min-h-screen bg-white">
+    <div className="text-default min-h-screen bg-white flex flex-col">
       {!isEducatorRoute && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/course-list" element={<CourseList />} />
-        <Route path="/course/:id" element={<CourseDetails />} />
-        <Route path="/course/:input" element={<CourseDetails />} />
-        <Route path="/my-enrollments" element={<MyEnrollments />} />
-        <Route path="/player/:courseId" element={<Player />} />
-        <Route path="/loading/:path" element={<Loading />} />
-        <Route path="/educator" element={<Educator />}>
-          <Route path="educator" element={<Dashboard />} />
-          <Route path="add-course" element={<AddCourse />} />
-          <Route path="my-course" element={<MyCourse />} />
-          <Route path="student-enrolled" element={<StudentsEnrolled />} />
-        </Route>
-      </Routes>
+      <div className="flex-1">
+        {/* <-- this pushes footer down */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/course-list" element={<CourseList />} />
+          <Route path="/course/:courseId" element={<CourseDetails />} />
+          <Route path="/my-enrollments" element={<MyEnrollments />} />
+          <Route path="/player/:courseId" element={<Player />} />
+          <Route path="/loading/:path" element={<Loading />} />
+
+          <Route path="/educator" element={<Educator />}>
+            <Route index element={<Dashboard />} />
+            <Route path="add-course" element={<AddCourse />} />
+            <Route path="my-course" element={<MyCourse />} />
+            <Route path="student-enrolled" element={<StudentsEnrolled />} />
+          </Route>
+
+          <Route path="*" element={<div>Page Not Found</div>} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 };

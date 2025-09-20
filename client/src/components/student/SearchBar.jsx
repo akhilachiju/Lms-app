@@ -5,7 +5,7 @@ const SearchBar = ({ value, onChange }) => {
   return (
     <form
       className="flex items-center bg-white rounded-full overflow-hidden shadow-md 
-                 w-11/12 sm:w-full max-w-md mx-auto md:mx-0"
+                 w-11/12 sm:w-full max-w-md mx-auto md:mx-0 relative"
     >
       {/* Input */}
       <input
@@ -17,7 +17,18 @@ const SearchBar = ({ value, onChange }) => {
                    text-sm xs:text-base sm:text-base text-black outline-none"
       />
 
-      {/* Icon */}
+      {/* Clear (X) Button */}
+      {value && (
+        <button
+          type="button"
+          onClick={() => onChange({ target: { value: "" } })}
+          className="absolute right-12 xs:right-14 sm:right-14 text-gray-400 hover:text-black"
+        >
+          <img src={assets.cross_icon} alt="Cross icon" />
+        </button>
+      )}
+
+      {/* Search Icon */}
       <div
         className="flex items-center justify-center 
                    w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 

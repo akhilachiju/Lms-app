@@ -6,6 +6,13 @@ const Breadcrumbs = () => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
+  // 👇 mapping for breadcrumb labels and links
+  const routeMap = {
+    "course": "/course-list",
+    "course-list": "/course-list",
+    "my-enrollments": "/my-enrollments",
+  };
+
   return (
     <nav className="text-sm text-gray-500 mb-4" aria-label="Breadcrumb">
       <ol className="flex flex-wrap items-center space-x-1">
@@ -21,8 +28,9 @@ const Breadcrumbs = () => {
 
         {/* Dynamic parts */}
         {pathnames.map((name, index) => {
-          const routeTo = "/" + pathnames.slice(0, index + 1).join("/");
           const isLast = index === pathnames.length - 1;
+          const routeTo =
+            routeMap[name] || "/" + pathnames.slice(0, index + 1).join("/");
 
           return (
             <li key={routeTo} className="flex items-center">
